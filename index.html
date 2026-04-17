@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Сергей Курбанов</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #e2e8f0;
+            background: linear-gradient(-45deg, #0f172a, #1e293b, #020617, #0f172a);
+            background-size: 400% 400%;
+            animation: bg 15s ease infinite;
+        }
+
+        @keyframes bg {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 2px solid #38bdf8;
+        }
+
+        h1 {
+            font-size: 34px;
+            margin: 10px 0;
+        }
+
+        .subtitle {
+            color: #94a3b8;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            margin-top: 50px;
+            font-size: 20px;
+            color: #cbd5f5;
+        }
+
+        .card {
+            background: rgba(30, 41, 59, 0.75);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            margin-top: 15px;
+            border-radius: 12px;
+            text-align: left;
+            line-height: 1.6;
+        }
+
+        .button {
+            display: inline-block;
+            margin: 8px;
+            padding: 12px 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+        }
+
+        .youtube { background: #ef4444; }
+        .telegram { background: #22c55e; }
+        .github { background: #64748b; }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <img class="avatar"
+         src="https://yt3.googleusercontent.com/zhSokv9qlVwNWeMDXH0_gMzufuk1Xvm5UxluY1BlFhVhBRUciTjqmEB9e9BbZtavMp9AIEsI=s160-c-k-c0x00ffffff-no-rj">
+
+    <h1>Сергей Курбанов</h1>
+    <div class="subtitle">
+        Студент СПбГУ · Программист · Ютубер
+    </div>
+
+    <h2>Обо мне</h2>
+    <div class="card">
+        <p>Учусь в СПбГУ.</p>
+        <p>Работаю с C и Python на базовом уровне.</p>
+        <p>8 лет занимался водным поло.</p>
+        <p>Окончил художественную школу в Ташкенте.</p>
+        <p>Изучаю Веды и придерживаюсь здорового образа жизни.</p>
+    </div>
+
+    <h2>Деятельность</h2>
+    <div class="card">
+        <p>Работаю репетитором по математике (5–9 классы).</p>
+        <p>Помогаю закрывать пробелы и готовиться к контрольным.</p>
+        <p>Развиваю YouTube и делюсь прогрессом.</p>
+    </div>
+
+    <h2>Контакты</h2>
+
+    <a class="button youtube"
+       href="https://youtube.com/@s_smk_17"
+       target="_blank">
+        YouTube
+    </a>
+
+    <a class="button telegram"
+       href="https://t.me/s_smk_17"
+       target="_blank">
+        Telegram
+    </a>
+
+    <a class="button github"
+       href="https://github.com/s-ksm1"
+       target="_blank">
+        GitHub
+    </a>
+
+</div>
+
+</body>
+</html>
