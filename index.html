@@ -39,9 +39,7 @@
       padding: 0;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: "DM Sans", system-ui, -apple-system, sans-serif;
@@ -110,9 +108,7 @@
       text-overflow: ellipsis;
     }
 
-    .logo span {
-      color: var(--accent);
-    }
+    .logo span { color: var(--accent); }
 
     nav ul {
       list-style: none;
@@ -126,9 +122,7 @@
       transition: color 0.2s;
     }
 
-    nav a:hover {
-      color: var(--text);
-    }
+    nav a:hover { color: var(--text); }
 
     .btn {
       display: inline-flex;
@@ -186,9 +180,7 @@
       font-size: 1rem;
     }
 
-    .hero {
-      padding: 4.5rem 0 3rem;
-    }
+    .hero { padding: 4.5rem 0 3rem; }
 
     .badge {
       display: inline-block;
@@ -254,9 +246,7 @@
       color: var(--muted);
     }
 
-    section {
-      padding: 3rem 0;
-    }
+    section { padding: 3rem 0; }
 
     section h2 {
       font-size: 1.35rem;
@@ -335,9 +325,7 @@
       color: var(--accent2);
     }
 
-    .project-top a:hover {
-      text-decoration: underline;
-    }
+    .project-top a:hover { text-decoration: underline; }
 
     .skills {
       display: flex;
@@ -405,9 +393,7 @@
         justify-content: flex-start;
       }
 
-      .controls .btn[href="#contact"] {
-        display: none;
-      }
+      .controls .btn[href="#contact"] { display: none; }
 
       .btn-ctrl {
         padding: 0.42rem 0.7rem;
@@ -430,22 +416,16 @@
         z-index: 60;
       }
 
-      nav ul.open {
-        display: flex;
-      }
+      nav ul.open { display: flex; }
 
       nav ul li a {
         display: block;
         padding: 0.65rem 1.25rem;
       }
 
-      nav ul li a:hover {
-        background: rgba(255, 255, 255, 0.04);
-      }
+      nav ul li a:hover { background: rgba(255, 255, 255, 0.04); }
 
-      .grid-2 {
-        grid-template-columns: 1fr;
-      }
+      .grid-2 { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -590,7 +570,9 @@
           <p data-i18n="contactText">Напишите пару слов о задаче — отвечу в течение рабочего дня.</p>
           <div style="display:flex;flex-wrap:wrap;gap:0.5rem;">
             <a class="btn btn-primary" href="mailto:sergey.smk2@gmail.com" data-i18n="writeMail">Написать на почту</a>
-            <a class="btn" href="http://t.me/s_smk17" target="_blank" rel="noopener">Telegram</a>
+            <a class="btn" href="https://t.me/s_smk17" target="_blank" rel="noopener">Telegram</a>
+            <a class="btn" href="https://t.me/s_smk_17" target="_blank" rel="noopener" data-i18n="telegramChannel">Telegram-канал</a>
+            <a class="btn" href="https://youtube.com/@s_smk_17?si=9ic721QThNJWWWGm" target="_blank" rel="noopener" data-i18n="youtube">YouTube</a>
           </div>
         </div>
       </div>
@@ -647,6 +629,8 @@
           contactsTitle: "Контакты",
           contactText: "Напишите пару слов о задаче — отвечу в течение рабочего дня.",
           writeMail: "Написать на почту",
+          telegramChannel: "Telegram-канал",
+          youtube: "YouTube",
           footer: "© 2026 Сергей Курбанов."
         },
         en: {
@@ -687,30 +671,26 @@
           contactsTitle: "Contacts",
           contactText: "Send a few words about your task — I reply during the business day.",
           writeMail: "Send email",
+          telegramChannel: "Telegram Channel",
+          youtube: "YouTube",
           footer: "© 2026 Sergey Kurbanov."
         }
       };
 
       function applyTheme(theme) {
         document.body.classList.toggle("light-theme", theme === "light");
-        if (themeToggle) {
-          themeToggle.textContent = theme === "light" ? "☀️" : "🌙";
-        }
+        if (themeToggle) themeToggle.textContent = theme === "light" ? "☀️" : "🌙";
         localStorage.setItem("theme", theme);
       }
 
       function applyLang(lang) {
         document.documentElement.lang = lang;
-        if (langToggle) {
-          langToggle.textContent = lang === "ru" ? "EN" : "RU";
-        }
+        if (langToggle) langToggle.textContent = lang === "ru" ? "EN" : "RU";
 
         var elements = document.querySelectorAll("[data-i18n]");
         elements.forEach(function (el) {
           var key = el.getAttribute("data-i18n");
-          if (texts[lang] && texts[lang][key]) {
-            el.textContent = texts[lang][key];
-          }
+          if (texts[lang] && texts[lang][key]) el.textContent = texts[lang][key];
         });
 
         localStorage.setItem("lang", lang);
